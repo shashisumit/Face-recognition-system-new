@@ -70,8 +70,7 @@ if st.button("continue"):
                 
         # Release the webcam
         cap.release()
-        # Close the image show frame
-        cv2.destroyAllWindows()
+        
 
 
     #function to detect face using OpenCV
@@ -167,9 +166,7 @@ if st.button("continue"):
                     #add label for this face
                     labels.append(label)
                 
-        cv2.destroyAllWindows()
         
-        cv2.destroyAllWindows()
         
         return faces, labels
 
@@ -254,7 +251,7 @@ if st.button("continue"):
         if 0xFF == ord('q'):
             break
     cap.release()
-    cv2.destroyAllWindows()
+    
 
 
     st.write("Predicting images...")
@@ -276,5 +273,5 @@ if st.button("continue"):
     cv2.imshow(subjects[len(subjects)-1], predicted_img1)
 
     
-    cv2.destroyAllWindows()
+    
 
