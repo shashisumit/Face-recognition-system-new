@@ -151,7 +151,7 @@ if st.button("continue"):
                 image = cv2.imread(image_path)
                 
                 #display an image window to show the image 
-                cv2.imshow("Training on image...", image)
+                st.image(image, caption="Training on image...")
                 cv2.waitKey(100)
                 
                 #detect face
