@@ -8,3 +8,4 @@ cv2
 os
 csv
 uuid
+uv
