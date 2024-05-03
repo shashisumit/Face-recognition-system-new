@@ -4,5 +4,3 @@ pandas
 streamlit
 seaborn
 opencv-python
-csv
-uuid
