@@ -3,6 +3,7 @@ numpy
 pandas
 streamlit
 seaborn
+opencv-python
 os
 csv
 uuid
