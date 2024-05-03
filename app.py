@@ -183,7 +183,7 @@ if st.button("continue"):
     st.write("Total labels: ", len(labels))
 
     #create our LBPH face recognizer 
-    face_recognizer = cv2.face.LBPHFaceRecognizer_create()
+    face_recognizer = cv2.face.EigenFaceRecognizer_create()
 
     #train our face recognizer of our training faces
     face_recognizer.train(faces, np.array(labels))
