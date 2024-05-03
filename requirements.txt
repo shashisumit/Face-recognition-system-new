@@ -3,4 +3,4 @@ numpy
 pandas
 streamlit
 seaborn
-opencv-python
+opencv-python-headless
