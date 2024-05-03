@@ -1,0 +1,9 @@
+scikit-learn
+numpy
+pandas
+streamlit
+seaborn
+cv2
+os
+csv
+uuid
