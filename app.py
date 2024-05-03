@@ -55,7 +55,7 @@ if st.button("continue"):
             frame = frame[120:120+250,200:200+250, :]
             
             # Collect PHOTO 
-            if cv2.waitKey(1) & 0XFF == ord('a'):
+            if 0XFF == ord('a'):
                 # Create the unique file path 
                 imgname = os.path.join(PHOTO_PATH, '{}.jpg'.format(uuid.uuid1()))
                 # Write out anchor image
@@ -65,7 +65,7 @@ if st.button("continue"):
             cv2.imshow('Image Collection', frame)
             
             # Breaking gracefully
-            if cv2.waitKey(1) & 0XFF == ord('q'):
+            if 0XFF == ord('q'):
                 break
                 
         # Release the webcam
@@ -152,7 +152,7 @@ if st.button("continue"):
                 
                 #display an image window to show the image 
                 st.image(image, caption="Training on image...")
-                cv2.waitKey(100)
+                
                 
                 #detect face
                 face, rect = detect_face(image)
@@ -168,7 +168,7 @@ if st.button("continue"):
                     labels.append(label)
                 
         cv2.destroyAllWindows()
-        cv2.waitKey(1)
+        
         cv2.destroyAllWindows()
         
         return faces, labels
@@ -234,7 +234,7 @@ if st.button("continue"):
         cv2.imshow('Verification', frame)
         
         # Verification trigger
-        if cv2.waitKey(10) & 0xFF == ord('v'):
+        if 0xFF == ord('v'):
             # Save input image to application_data/input_image folder 
     #         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     #         h, s, v = cv2.split(hsv)
@@ -251,7 +251,7 @@ if st.button("continue"):
             # Run verification
             
         
-        if cv2.waitKey(10) & 0xFF == ord('q'):
+        if 0xFF == ord('q'):
             break
     cap.release()
     cv2.destroyAllWindows()
@@ -275,6 +275,6 @@ if st.button("continue"):
     #display both images
     cv2.imshow(subjects[len(subjects)-1], predicted_img1)
 
-    cv2.waitKey(0)
+    
     cv2.destroyAllWindows()
 
