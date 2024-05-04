@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition System</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <h1 id="h11">Face Recognition System</h1>
+    <form action="/continue" method="post">
+        <label for="inp">Do you want to append name?</label>
+        <input type="text" id="inp" name="inp" placeholder="yes/no"><br><br>
+        
+        <label for="name">Enter name:</label>
+        <input type="text" id="name" name="name" placeholder="Name"><br><br>
+        
+        <label for="img_name">Enter image name:</label>
+        <input type="text" id="img_name" name="img_name" placeholder="Image name"><br><br>
+        
+        <input type="submit" value="Continue">
+    </form>
+
+    <div id="deebiya">
+        <h3 id="h33">instruction</h3>
+        <p id="p11">1. If you are adding new image then writing name is mendetory else you can write any thing to fill that column because of no default falue.</p>
+        <p id="p22">2. If you are adding new image then two window will open.
+              for first window you need to press (a) for 5 sec and adject your face to every angel. 
+              and then for closing window you need to press (q).
+              for second popup you need to adject your face and then press (v) 3-5 time to ensure capturing of image and then press (q) to close window. 
+        </p>
+        <p id="p33">
+            3. If you are not adding image then you need to adject your face and then press (v) 3-5 time to ensure capturing of image and then press (q) to close window.  
+        </p>
+
+    </div>
+</body>
+</html>
