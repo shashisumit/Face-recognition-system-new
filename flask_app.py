@@ -140,12 +140,9 @@ def continue_process():
         #draw name of predicted person
         draw_text(img, label_text, rect[0], rect[1]-5)
         
-        return img
+        return img,label_text
 
-    def instr1():
-            return "Adjust the camera for capturing image. /n Press 'v' to capture image. /n Then press q for close the camera"
-
-    instr1()
+    
     cap = cv2.VideoCapture(0)
     while cap.isOpened():
         ret, frame = cap.read()
@@ -165,9 +162,8 @@ def continue_process():
             
     #         final_hsv = cv2.merge((h, s, v))
     #         img = cv2.cvtColor(final_hsv, cv2.COLOR_HSV2BGR)
-            def print2():
-                return "image is captured."
-            print2()
+            print("image is captured")
+            
             cv2.imwrite(os.path.join('test-data',f'{img_name}.jpg'), frame)
             # Run verification
             
@@ -188,12 +184,12 @@ def continue_process():
 
 
     #perform a prediction
-    predicted_img1 = predict(test_img1)
+    predicted_img1,predictedName = predict(test_img1)
 
     
 
-    #display both images
-    cv2.imshow(subjects[len(subjects)-1], predicted_img1)
+    
+    cv2.imshow(predictedName, predicted_img1)
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
